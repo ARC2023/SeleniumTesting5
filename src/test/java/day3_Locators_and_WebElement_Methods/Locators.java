@@ -91,7 +91,7 @@ public class Locators {
 		// 7.3 ancestor
 		//input[@name='btnReset']//ancestor::tr
 		// 7.4 descendant
-		(//table[@align='center'])[2]//descendant::input
+		//(//table[@align='center'])[2]//descendant::input
 		// 7.5 parent
 		
 		// 7.6 following-sibling
@@ -100,6 +100,12 @@ public class Locators {
 		
 		// 8. Dynamic X path
 		
+		
+		
+		
 	}
-
+	public void dynamicXpath(String companyName) {
+		String str = "//a[text()='"+companyName+"']//parent::td//preceding-sibling::td//button";
+		}
+////a[text()='HDFCBANK']//ancestor::tr//td//button
 }
