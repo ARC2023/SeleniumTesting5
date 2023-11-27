@@ -42,13 +42,19 @@ public class FramesHandling {
 		
 		System.out.println("Size of frames: "+framesList.size());
 		
-		for(int i=0;i<framesList.size();i++) {
+		for(int i=0;i<framesList.size()-1;i++) {
 			
+			try {
 			driver.switchTo().frame(i);
+            List<WebElement> countItem = driver.findElements(By.xpath("/html/body/a"));
+            int count = countItem.size();
+            if(count>0)
+            	System.out.println("Counter when iframe identified "+count);
 			
-			List<WebElement> countItem = driver.findElements(By.id("a077aa5e"));
-			
-			System.out.println("Counter "+countItem.size());
+			driver.switchTo().defaultContent();
+			}catch(Exception e) {
+				System.out.println("failed frame");
+			}
 			
 		}
 		
