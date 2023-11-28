@@ -38,28 +38,29 @@ public class FramesHandling {
 		*/
 		// iframes by using index
 		
-		List<WebElement> framesList = driver.findElements(By.tagName("iframe"));
+		List<WebElement> frames= driver.findElements(By.tagName("iframe"));
 		
-		System.out.println("Size of frames: "+framesList.size());
+		System.out.println("Count of frames:"+frames.size());
 		
-		for(int i=0;i<framesList.size()-1;i++) {
+		
+		for(int i=0;i<frames.size()-1;i++) {
 			
-			try {
 			driver.switchTo().frame(i);
-            List<WebElement> countItem = driver.findElements(By.xpath("/html/body/a"));
-            int count = countItem.size();
-            if(count>0)
-            	System.out.println("Counter when iframe identified "+count);
 			
-			driver.switchTo().defaultContent();
-			}catch(Exception e) {
-				System.out.println("failed frame");
+			List<WebElement> presenceOfElementInFrame = driver.findElements(By.xpath("/html/body/a"));
+			
+			int count = presenceOfElementInFrame.size();
+			
+			if(count>0) {
+				System.out.println("Frame Identified");
+				break;
+			} else {
+				System.out.println("Not the required frame");
 			}
 			
+			driver.switchTo().defaultContent();
+			
 		}
-		
-		
-		
 		
 	}
 
