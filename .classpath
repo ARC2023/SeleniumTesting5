@@ -74,5 +74,24 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/glend/.m2/repository/org/apache/ant/ant/1.10.3/ant-1.10.3.jar" sourcepath="C:/Users/glend/.m2/repository/org/apache/ant/ant/1.10.3/ant-1.10.3-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="test" value="true"/>
+			<attribute name="maven.groupId" value="org.apache.ant"/>
+			<attribute name="maven.artifactId" value="ant"/>
+			<attribute name="maven.version" value="1.10.3"/>
+			<attribute name="maven.scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/glend/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar" sourcepath="C:/Users/glend/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="commons-io"/>
+			<attribute name="maven.artifactId" value="commons-io"/>
+			<attribute name="maven.version" value="2.6"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
