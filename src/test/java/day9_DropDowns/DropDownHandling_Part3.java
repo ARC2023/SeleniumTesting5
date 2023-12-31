@@ -22,6 +22,7 @@ public class DropDownHandling_Part3 {
 		WebElement dropDownButton = driver.findElement(By.id("btndropdown"));
 		jsexecutor.clickOnElement(dropDownButton, driver);
 		Thread.sleep(3000);
+		selectedvalues(driver);
 		/*bootStrapDD("jQuery", driver);
 		bootStrapDD("HTML", driver);
 		bootStrapDD("Bootstrap", driver);
@@ -32,10 +33,26 @@ public class DropDownHandling_Part3 {
 		
 		bootStrapDD(ddms, driver);*/
 
-		bootStrapDDSS("HTML", driver);
+		//bootStrapDDSS("HTML", driver);
 		
 	}
 
+	
+	public static void selectedvalues(WebDriver driver) {
+		List<WebElement> value = driver.findElements(By.xpath("//ul[@class='dropdown-menu']//li//label//input"));
+		
+		for(int i=0;i<value.size();i++) {
+			
+			if(value.get(i).isSelected()) {
+				int xpathIndex=i+1;
+				System.out.println(driver.findElement(By.xpath("(//ul[@class='dropdown-menu']//li//label)["+xpathIndex+"]")).getText());
+			}
+			
+		}
+	}
+	
+	
+	
 	public static void bootStrapDDSS(String str, WebDriver driver) throws InterruptedException {
 
 		
